@@ -79,7 +79,7 @@ class HanoiTowerRecursive():
 
 # Test
 if __name__ == '__main__':
-    #hanoi = HanoiTowerIterative(NUMBER_OF_DISKS)
-    #hanoi.solve()
-    hanoi = HanoiTowerRecursive()
-    hanoi.solve(NUMBER_OF_DISKS,A,B,C)
+    hanoi = HanoiTowerIterative(NUMBER_OF_DISKS)
+    hanoi.solve()
+    #hanoi = HanoiTowerRecursive()
+    #hanoi.solve(NUMBER_OF_DISKS,A,B,C)
