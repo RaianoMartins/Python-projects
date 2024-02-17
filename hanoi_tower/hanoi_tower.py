@@ -58,7 +58,7 @@ class HanoiTowerIterative():
                 self.make_allowed_move(self.auxiliary,self.target)           
             print(self.rods, '\n')
 
-
+# Recursive implement
 class HanoiTowerRecursive():
     def solve(self,n,source,auxiliary,target):
         if n <= 0:
@@ -77,7 +77,7 @@ class HanoiTowerRecursive():
         self.solve(n-1,auxiliary,source,target)
                 
 
-# initiate call from source A to target C with auxiliary B
+# Test
 if __name__ == '__main__':
     #hanoi = HanoiTowerIterative(NUMBER_OF_DISKS)
     #hanoi.solve()
