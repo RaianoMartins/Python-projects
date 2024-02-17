@@ -19,7 +19,7 @@ class HanoiTowerIterative():
        self.auxiliary = 'B'
        self.target =  'C'
 
-    def make_allowed_move(self,rod1,rod2):   
+    def move(self,rod1,rod2):   
 
         forward = False
         if not self.rods[rod2]:
@@ -42,20 +42,20 @@ class HanoiTowerIterative():
             if remainder == 1:
                 if self.number_of_disks % 2 != 0:
                     print(f'Move {i + 1}')
-                    self.make_allowed_move(self.source,self.target)
+                    self.move(self.source,self.target)
                 else:
                     print(f'Move {i + 1}')
-                    self.make_allowed_move(self.source,self.auxiliary)
+                    self.move(self.source,self.auxiliary)
             elif remainder == 2:
                 if self.number_of_disks % 2 != 0:
                     print(f'Move {i + 1}')
-                    self.make_allowed_move(self.source,self.auxiliary)
+                    self.move(self.source,self.auxiliary)
                 else:
                     print(f'Move {i + 1}')
-                    self.make_allowed_move(self.source,self.target)
+                    self.move(self.source,self.target)
             elif remainder == 0:
                 print(f'Move {i + 1}')
-                self.make_allowed_move(self.auxiliary,self.target)           
+                self.move(self.auxiliary,self.target)           
             print(self.rods, '\n')
 
 # Recursive implement
